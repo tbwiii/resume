@@ -2,13 +2,14 @@ import {
   IconBrandAppleFilled,
   IconPigMoney,
   IconFishHook,
+  IconStarFilled,
 } from "@tabler/icons-react";
 import BlurFade from "./magicui/blur-fade";
 
 type xpItem = {
   title: string;
   company: string;
-  companyBg: string;
+  theming: string;
   icon: JSX.Element;
   date: string;
   description: string;
@@ -19,7 +20,7 @@ const xpItems: xpItem[] = [
   {
     title: "Senior Full Stack Engineer",
     company: "Apple",
-    companyBg: "bg-black",
+    theming: "text-black",
     icon: <IconBrandAppleFilled size={20} />,
     date: "2022 - Present",
     description:
@@ -27,12 +28,13 @@ const xpItems: xpItem[] = [
     accomplishments: [
       "Implemented a sensitive-information roll-out tool for managing user access to unannounced product info",
       "Optimized an audit tool for analyzing over 8 million MongoDB documents. 3+ hours => ~5 minutes",
+      "Create a messaging system for recording publish data and user activity with Kafka and MongoDB",
     ],
   },
   {
     title: "Co-Founder/Principal Engineer",
     company: "OinkChing",
-    companyBg: "bg-purple-600",
+    theming: "text-purple-600",
     icon: <IconPigMoney size={20} />,
     date: "2020 - 2022",
     description:
@@ -46,7 +48,7 @@ const xpItems: xpItem[] = [
   {
     title: "Software Engineer II",
     company: "PhishMe",
-    companyBg: "bg-red-400",
+    theming: "text-red-400",
     icon: <IconFishHook size={18} />,
     date: "2015 - 2018",
     description:
@@ -64,15 +66,16 @@ export default function Experience() {
       {xpItems.map((item, idx) => (
         <BlurFade key={idx} duration={0.75} delay={idx * 0.2 + 0.5}>
           <div className="grid gap-4 border-b-2 pb-10" key={item.title}>
-            <div className="flex gap-2 justify-between">
-              <div className="flex gap-4">
+            <div className="lg:flex gap-2 justify-between">
+              <div className="lg:flex gap-4">
                 <h3 className="text-2xl">{item.title}</h3>
-
                 <div
-                  className={`flex gap-1 items-center py-1 px-2 text-white text-sm rounded ${item.companyBg}`}
+                  className={`inline-block py-2 text-sm rounded ${item.theming}`}
                 >
-                  {item.icon}
-                  {item.company}
+                  <span className="flex gap-1 items-center">
+                    {item.icon}
+                    {item.company}
+                  </span>
                 </div>
               </div>
               <span>{item.date}</span>
@@ -80,9 +83,14 @@ export default function Experience() {
             {item.description}
 
             <h4 className="text-xl text-emerald-800">Accomplishments</h4>
-            <ul className="list-disc ml-4">
+            <ul>
               {item.accomplishments.map((accomplishment, idx) => (
-                <li key={idx}>{accomplishment}</li>
+                <li className="flex gap-4 items-center mb-2" key={idx}>
+                  <span className="shrink-0 text-opal-500">
+                    <IconStarFilled size={14} />
+                  </span>
+                  <span>{accomplishment}</span>
+                </li>
               ))}
             </ul>
           </div>
