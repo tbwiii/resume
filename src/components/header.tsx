@@ -57,13 +57,15 @@ export default function Header() {
         </BlurFade>
       </div>
 
-      <div className="grid gap-2">
-        {links.map((link, index) => (
-          <a key={index} href={link.href} className={linkClasses}>
-            {link.icon} {link.text}
-          </a>
-        ))}
-      </div>
+      <BlurFade xOffset={20}>
+        <div className="grid gap-2">
+          {links.map((link, index) => (
+            <a key={index} href={link.href} className={linkClasses}>
+              {link.icon} {link.text}
+            </a>
+          ))}
+        </div>
+      </BlurFade>
 
       <GridPattern
         numSquares={30}

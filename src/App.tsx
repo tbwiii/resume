@@ -4,7 +4,7 @@ import { DotPattern } from "@components/magicui/dot-pattern";
 import BlurFade from "@components/magicui/blur-fade";
 import Experience from "@components/experience";
 import Skills from "@components/skills";
-import { IconBrandLinkedin } from "@tabler/icons-react";
+import { IconExternalLink } from "@tabler/icons-react";
 
 const colTitleClasses = "text-2xl mb-4";
 
@@ -31,15 +31,17 @@ function App() {
               <div className="grid gap-8">
                 <Experience />
                 <div className="flex justify-between">
-                  <a
-                    className="bg-sky-700 text-white inline-block py-2 px-2 rounded hover:text-white hover:bg-sky-600 transition-colors"
-                    href="https://www.linkedin.com/in/tbwiii"
-                  >
-                    <span className="flex gap-2 items-center">
-                      <IconBrandLinkedin />
-                      More on LinkedIn
-                    </span>
-                  </a>
+                  <h4 className="text-2xl">
+                    <a
+                      className="hover:underline transition-all text-opal-500"
+                      href="https://www.linkedin.com/in/tbwiii"
+                    >
+                      <span className="flex gap-2 items-center">
+                        More on LinkedIn
+                        <IconExternalLink />
+                      </span>
+                    </a>
+                  </h4>
 
                   <span>2007 - 2024</span>
                 </div>
