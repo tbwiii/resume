@@ -13,7 +13,7 @@ function App() {
     <>
       <div className="container m-auto bg-white rounded-xl shadow text-slate-900">
         <Header />
-        <div className="p-8 text-lg text-white drop-shadow shadow-inner bg-opal-400">
+        <div className="p-8 text-lg text-white drop-shadow shadow-inner bg-gradient-to-tl from-opal-400 to-opal-600">
           <BlurFade delay={0.25} duration={0.75}>
             <p>
               Senior Full Stack Developer with a <strong>focus</strong> on{" "}
