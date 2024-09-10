@@ -37,7 +37,7 @@ export default function Header() {
     },
     {
       href: "mailto:ted.waller.iii@gmail.com",
-      text: "ted.waller.iii@gmail",
+      text: "Email",
       icon: <IconMail />,
     },
   ];
