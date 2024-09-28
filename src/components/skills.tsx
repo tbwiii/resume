@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import BlurFade from "./magicui/blur-fade";
 import IconNetlify from "@components/icons/netlify";
 import IconGodot from "@components/icons/godot";
+import IconAffinity from "@components/icons/affinity";
 import {
   IconBrandAws,
   IconBrandCss3,
@@ -78,6 +79,10 @@ const skillItems: skillItem[] = [
   {
     name: "AWS",
     icon: <IconBrandAws />,
+  },
+  {
+    name: "Affinity Suite",
+    icon: <IconAffinity />,
   },
   {
     name: "Vercel",

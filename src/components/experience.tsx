@@ -46,7 +46,7 @@ const xpItems: xpItem[] = [
     ],
   },
   {
-    title: "Software Engineer II",
+    title: "Software Engineer",
     company: "PhishMe",
     theming: "text-red-400",
     icon: <IconFishHook size={18} />,
