@@ -1,3 +1,4 @@
+import React from "react";
 import {
   IconBrandAppleFilled,
   IconPigMoney,
@@ -55,7 +56,7 @@ const xpItems: xpItem[] = [
       "Developed and maintained a suite of security awareness training products. Worked with a team of developers to implement new features, fix bugs, and maintain existing code.",
     highlights: [
       "Co-created a Vue based style library (Koi) for the Phishing Simulator",
-      "Led the presentation, training, and implimentation of Koi",
+      "Led the presentation, training, and implementation of Koi",
     ],
   },
 ];
