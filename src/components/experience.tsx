@@ -41,7 +41,7 @@ const xpItems: xpItem[] = [
       "Make and implement all design and development decisions. Develop features, fix bugs, and maintain the platform.",
     highlights: [
       "Created a feature-rich financial literacy platform where users could simulate financial decisions (stocks, purchase a house, checking account).",
-      "Utilizing services like Stripe, AWS Lambda, and Vimeo, created a platform that allowed users to purchsase and watch a series of course videos.",
+      "Utilizing services like Stripe, AWS Lambda, and Vimeo, created a platform that allowed users to purchase and watch a series of course videos.",
       "Implemented an extensible Admin CMS for managing users, courses, and simulator content.",
     ],
   },
