@@ -24,8 +24,9 @@ const xpItems: xpItem[] = [
     icon: <IconBrandAppleFilled size={20} />,
     date: "2022 - Present",
     description:
-      "Enhance Conversation Kit Studio for managing multi region and multi lingual application content. Develop new features, write and execute migrations, troubleshoot erroneous data, and strategically plan and decompose feature stories.",
+      `Enhance Conversation Kit Studio for managing multi region and multi lingual application content. Develop new features, write and execute migrations, troubleshoot erroneous data, and strategically plan and decompose feature stories.`,
     highlights: [
+      "Improved the publishing and localization process for hundreds of dialog flows, enabling support for millions of messages each month.",
       "Implemented a sensitive-information roll-out tool for managing user access to unannounced product info",
       "Optimized an audit tool for analyzing over 8 million MongoDB documents. 3+ hours => ~5 minutes",
       "Create a messaging system for recording publish data and user activity with Kafka and MongoDB",
