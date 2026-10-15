@@ -1,11 +1,12 @@
 // TEMPORARY: remove this component (and its use in App.tsx) once a design is chosen.
-export type VersionKey = "refined" | "spec" | "editorial" | "timeline";
+export type VersionKey = "opal" | "slate" | "plum" | "light" | "editorial";
 
-export const versions: { key: VersionKey; label: string; note: string }[] = [
-  { key: "refined", label: "A", note: "Original, refined" },
-  { key: "spec", label: "B", note: "Spec sheet" },
-  { key: "editorial", label: "C", note: "Editorial" },
-  { key: "timeline", label: "D", note: "Timeline" },
+export const versions: { key: VersionKey; label: string }[] = [
+  { key: "opal", label: "A1 · Opal" },
+  { key: "slate", label: "A2 · Slate blue" },
+  { key: "plum", label: "A3 · Plum" },
+  { key: "light", label: "A4 · Light header" },
+  { key: "editorial", label: "C · Editorial" },
 ];
 
 export default function VersionSwitcher({
@@ -30,7 +31,7 @@ export default function VersionSwitcher({
               : "border-white/40 hover:border-white"
           }`}
         >
-          {v.label} · {v.note}
+          {v.label}
         </button>
       ))}
     </div>
