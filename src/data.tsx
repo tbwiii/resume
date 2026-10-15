@@ -29,6 +29,7 @@ import {
   IconDatabase,
   IconDiamond,
   IconFishHook,
+  IconLayoutDashboard,
   IconMail,
   IconMessage,
   IconPigMoney,
@@ -129,6 +130,22 @@ export const jobs: Job[] = [
       "Created a feature-rich financial literacy platform where users could simulate financial decisions (stocks, purchase a house, checking account).",
       "Utilizing services like Stripe, AWS Lambda, and Vimeo, created a platform that allowed users to purchase and watch a series of course videos.",
       "Implemented an extensible Admin CMS for managing users, courses, and simulator content.",
+    ],
+  },
+  {
+    id: "iou",
+    title: "Senior UX/UI Engineer",
+    company: "IOU",
+    Icon: IconLayoutDashboard,
+    start: 2019,
+    end: 2020.3,
+    date: "Jan 2019 - Apr 2020",
+    description:
+      "Revise outdated front-end code to ensure maintainability and alignment with modern standards.",
+    highlights: [
+      "Overhaul the UI/UX by introducing contemporary styles and pathways following best practices.",
+      "Collaborate with users to identify pain points and establish a strategic UX/UI roadmap.",
+      "Work closely with the back-end team to plan and execute UI modifications.",
     ],
   },
   {
