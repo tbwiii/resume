@@ -39,6 +39,36 @@ button:focus-visible {
 .v-timeline { font-family: "Hanken Grotesk", system-ui, sans-serif; }
 .v-timeline .font-display { font-family: "Newsreader", Georgia, serif; }
 
+/* A: page backdrop is a soft opal wash with a faint dot grid. */
+.v-refined-bg {
+  background-color: #dde6e4;
+  background-image:
+    radial-gradient(circle, rgba(61, 91, 81, 0.28) 1px, transparent 1.5px),
+    radial-gradient(ellipse 80% 50% at 50% 0%, #f3f7f6 0%, transparent 70%),
+    linear-gradient(180deg, #dde6e4 0%, #c0ceca 100%);
+  background-size: 22px 22px, 100% 100%, 100% 100%;
+  background-attachment: scroll, fixed, fixed;
+}
+
+/* A: header is a diagonal gradient with a grid that fades out to the left. */
+.v-refined-header {
+  position: relative;
+  background-image: linear-gradient(120deg, #e9f0ee 0%, #c0ceca 55%, #a3b6b1 100%);
+  isolation: isolate;
+}
+.v-refined-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, rgba(40, 70, 60, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(40, 70, 60, 0.16) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: linear-gradient(to right, transparent 15%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 15%, #000 100%);
+}
+
 @media print {
   .v-refined, .v-spec, .v-editorial, .v-timeline { background: #fff; }
 }

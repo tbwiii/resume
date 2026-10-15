@@ -4,9 +4,9 @@ import { jobs, links, profile, skillItems } from "../data";
 // A: the original layout and palette, with tighter colour, type and spacing.
 export default function Refined() {
   return (
-    <div className="v-refined min-h-screen bg-opal-50 px-4 py-8 lg:py-12">
+    <div className="v-refined v-refined-bg min-h-screen px-4 py-8 lg:py-12">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg ring-1 ring-opal-900/5 overflow-hidden text-slate-800">
-        <header className="bg-opal-100 px-8 lg:px-10 py-8 grid gap-6 lg:flex lg:items-end lg:justify-between">
+        <header className="v-refined-header px-8 lg:px-10 py-10 lg:py-12 grid gap-6 lg:flex lg:items-end lg:justify-between">
           <div>
             <h1 className="text-5xl lg:text-6xl font-semibold text-opal-800 leading-none">
               {profile.name}
@@ -30,7 +30,7 @@ export default function Refined() {
           </nav>
         </header>
 
-        <div className="bg-opal-600 text-white px-8 lg:px-10 py-6">
+        <div className="bg-gradient-to-r from-opal-800 via-opal-700 to-opal-500 text-white px-8 lg:px-10 py-6">
           <p className="text-lg leading-relaxed max-w-4xl">{profile.summary}</p>
         </div>
 
