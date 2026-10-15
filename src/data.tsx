@@ -28,7 +28,6 @@ import {
   IconCode,
   IconDatabase,
   IconDiamond,
-  IconFishHook,
   IconLayoutDashboard,
   IconMail,
   IconMessage,
@@ -146,21 +145,6 @@ export const jobs: Job[] = [
       "Overhaul the UI/UX by introducing contemporary styles and pathways following best practices.",
       "Collaborate with users to identify pain points and establish a strategic UX/UI roadmap.",
       "Work closely with the back-end team to plan and execute UI modifications.",
-    ],
-  },
-  {
-    id: "phishme",
-    title: "Software Engineer",
-    company: "PhishMe",
-    Icon: IconFishHook,
-    start: 2015,
-    end: 2018,
-    date: "2015 - 2018",
-    description:
-      "Developed and maintained a suite of security awareness training products. Worked with a team of developers to implement new features, fix bugs, and maintain existing code.",
-    highlights: [
-      "Co-created a Vue based style library (Koi) for the Phishing Simulator",
-      "Led the presentation, training, and implementation of Koi",
     ],
   },
 ];

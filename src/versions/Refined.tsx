@@ -8,20 +8,20 @@ export default function Refined() {
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg ring-1 ring-opal-900/5 overflow-hidden text-slate-800">
         <header className="v-refined-header px-8 lg:px-10 py-10 lg:py-12 grid gap-6 lg:flex lg:items-end lg:justify-between">
           <div>
-            <h1 className="text-5xl lg:text-6xl font-semibold text-opal-800 leading-none">
+            <h1 className="text-5xl lg:text-6xl font-semibold text-white leading-none">
               {profile.name}
             </h1>
-            <p className="mt-2 text-2xl text-opal-600">{profile.title}</p>
+            <p className="mt-2 text-2xl text-opal-100">{profile.title}</p>
           </div>
           <nav
             aria-label="Contact"
-            className="flex flex-wrap gap-x-6 gap-y-2 text-opal-700"
+            className="flex flex-wrap gap-x-6 gap-y-2 text-opal-50"
           >
             {links.map(({ href, text, Icon }) => (
               <a
                 key={text}
                 href={href}
-                className="flex gap-2 items-center hover:text-opal-900 hover:underline underline-offset-4"
+                className="flex gap-2 items-center hover:text-white hover:underline underline-offset-4"
               >
                 <Icon size={20} />
                 {text}
@@ -30,7 +30,7 @@ export default function Refined() {
           </nav>
         </header>
 
-        <div className="bg-gradient-to-r from-opal-800 via-opal-700 to-opal-500 text-white px-8 lg:px-10 py-6">
+        <div className="bg-opal-50 text-opal-900 border-b border-opal-200 px-8 lg:px-10 py-6">
           <p className="text-lg leading-relaxed max-w-4xl">{profile.summary}</p>
         </div>
 
