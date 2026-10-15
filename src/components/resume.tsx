@@ -1,17 +1,12 @@
 import { IconExternalLink, IconStarFilled } from "@tabler/icons-react";
 import { jobs, links, profile, skillItems } from "../data";
 
-export type Palette = "opal" | "slate" | "plum" | "light";
-
-// A: the original layout, tightened. Colour comes entirely from the CSS
-// variables defined per palette in App.css (.pal-opal, .pal-slate, ...).
-export default function Refined({ palette }: { palette: Palette }) {
+// Colours come from the CSS variables defined on .resume in App.css.
+export default function Resume() {
   return (
-    <div
-      className={`v-refined v-refined-bg pal-${palette} min-h-screen px-4 py-8 lg:py-12`}
-    >
+    <div className="resume resume-bg min-h-screen px-4 py-8 lg:py-12">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg ring-1 ring-black/5 overflow-hidden text-slate-800">
-        <header className="v-refined-header px-8 lg:px-10 py-10 lg:py-12 grid gap-6 lg:flex lg:items-end lg:justify-between">
+        <header className="resume-header px-8 lg:px-10 py-10 lg:py-12 grid gap-6 lg:flex lg:items-end lg:justify-between">
           <div>
             <h1 className="text-5xl lg:text-6xl font-semibold leading-none text-[color:var(--h-text)]">
               {profile.name}

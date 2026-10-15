@@ -149,47 +149,6 @@ export const jobs: Job[] = [
   },
 ];
 
-export const skillGroups: { title: string; items: string[] }[] = [
-  {
-    title: "Languages",
-    items: ["JavaScript", "TypeScript", "Ruby", "HTML", "CSS / SCSS"],
-  },
-  {
-    title: "Frameworks",
-    items: [
-      "React",
-      "Next",
-      "Vue",
-      "Nuxt",
-      "Svelte",
-      "Node",
-      "Ruby on Rails",
-      "GraphQL",
-      "Tailwind",
-      "Vite",
-    ],
-  },
-  { title: "Data", items: ["PostgreSQL", "MongoDB", "Redis"] },
-  {
-    title: "Platforms & tooling",
-    items: [
-      "AWS",
-      "Docker",
-      "Vercel",
-      "Netlify",
-      "Git",
-      "GitHub",
-      "Cypress",
-      "WordPress",
-      "Claude Code",
-    ],
-  },
-  {
-    title: "Design & outside work",
-    items: ["Figma", "Affinity Suite", "Godot", "Card tricks"],
-  },
-];
-
 export const skillItems: { name: string; icon: ReactNode }[] = [
   { name: "JavaScript", icon: <IconBrandJavascript color="#F0DB4F" /> },
   { name: "TypeScript", icon: <IconBrandTypescript color="#4476c0" /> },

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..700&family=Noto+Sans:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..700&family=Noto+Sans:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,43 +18,24 @@ body {
   width: 100%;
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #2c3ee8;
+a:focus-visible {
+  outline: 2px solid #3d5b51;
   outline-offset: 3px;
 }
 
-/* ---- A: refined original --------------------------------------------- */
-.v-refined { font-family: "Noto Sans", system-ui, sans-serif; }
-.v-refined :is(h1, h2, h3) { font-family: "EB Garamond", Georgia, serif; }
+.resume { font-family: "Noto Sans", system-ui, sans-serif; }
+.resume :is(h1, h2, h3) { font-family: "EB Garamond", Georgia, serif; }
 
-/* Palettes. h-* = header, soft = tinted surfaces, bg-* = page backdrop. */
-.pal-opal {
+/* Palette. h-* = header, soft = tinted surfaces, bg-* = page backdrop. */
+.resume {
   --h-from: #3d5b51; --h-to: #6d887f; --h-text: #fff; --h-sub: #e3ebe9;
   --h-grid: rgba(255, 255, 255, 0.22); --h-rule: #a3b6b1;
   --ink: #143228; --accent: #3d5b51; --soft: #eef3f1; --soft-line: #c9d6d2;
   --bg-from: #e8efed; --bg-to: #c0ceca; --dot: rgba(61, 91, 81, 0.28);
 }
-.pal-slate {
-  --h-from: #2f4f5f; --h-to: #6b8791; --h-text: #fff; --h-sub: #e1eaee;
-  --h-grid: rgba(255, 255, 255, 0.22); --h-rule: #a2b6ba;
-  --ink: #0e303c; --accent: #3b5a67; --soft: #edf2f4; --soft-line: #c8d5d8;
-  --bg-from: #e6edef; --bg-to: #bfced0; --dot: rgba(59, 90, 103, 0.28);
-}
-.pal-plum {
-  --h-from: #4f3a4a; --h-to: #877f93; --h-text: #fff; --h-sub: #ece7ee;
-  --h-grid: rgba(255, 255, 255, 0.2); --h-rule: #b7b0bc;
-  --ink: #2e2a3d; --accent: #654f5f; --soft: #f3f0f3; --soft-line: #d8d0d6;
-  --bg-from: #eeeaee; --bg-to: #cfc9d1; --dot: rgba(101, 79, 95, 0.26);
-}
-.pal-light {
-  --h-from: #f6f9f8; --h-to: #dde6e4; --h-text: #143228; --h-sub: #3d5b51;
-  --h-grid: rgba(40, 70, 60, 0.12); --h-rule: #28463c;
-  --ink: #143228; --accent: #28463c; --soft: #f3f6f5; --soft-line: #d3ddda;
-  --bg-from: #e8efed; --bg-to: #c0ceca; --dot: rgba(61, 91, 81, 0.28);
-}
 
-.v-refined-bg {
+/* Page backdrop: soft opal wash with a faint dot grid. */
+.resume-bg {
   background-color: var(--bg-to);
   background-image:
     radial-gradient(circle, var(--dot) 1px, transparent 1.5px),
@@ -64,14 +45,14 @@ button:focus-visible {
   background-attachment: scroll, fixed, fixed;
 }
 
-/* Header: a mid-tone diagonal gradient with a crisp grid fading in from the left. */
-.v-refined-header {
+/* Header: mid-tone diagonal gradient with a crisp grid fading in from the left. */
+.resume-header {
   position: relative;
   background-image: linear-gradient(115deg, var(--h-from) 0%, var(--h-to) 100%);
   border-bottom: 4px solid var(--h-rule);
   isolation: isolate;
 }
-.v-refined-header::before {
+.resume-header::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -84,19 +65,8 @@ button:focus-visible {
   mask-image: linear-gradient(to right, transparent 30%, #000 100%);
 }
 
-/* ---- C: editorial ----------------------------------------------------- */
-.v-editorial { font-family: "Hanken Grotesk", system-ui, sans-serif; }
-.v-editorial :is(h1, h2, h3), .v-editorial .font-display {
-  font-family: "Newsreader", Georgia, serif;
-}
-.v-editorial-hero {
-  background-color: #e3f1ea;
-  background-image:
-    linear-gradient(to right, rgba(13, 42, 34, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(13, 42, 34, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
 @media print {
-  .v-refined, .v-editorial { background: #fff; }
+  .resume-bg {
+    background: #fff;
+  }
 }
