@@ -1,91 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
- h1, h2, h3, h4, h5, h6 {
-  @apply text-harlequin-600;
-  font-family: "EB Garamond", system-ui;
+html {
+  background: #cfdad6;
 }
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
-
-    --primary: 209 56% 42%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 5%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 5%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 92%;
-    --input: 0 0% 85%;
-    --ring: 0 0% 76%;
-
-    --radius: 0.5rem;
-  }
-  
-  .dark {
-    --background: 120 3% 6%;
-    --foreground: 0 0% 98%;
-
-    --card: 90 6% 7%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 90 6% 7%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 108 10% 40%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 105 5% 15%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 110 5% 22%;
-    --muted-foreground: 110 5% 49%;
-
-    --accent: 107 45% 14%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 100 5% 12%;
-    --input: 105 4% 18%;
-    --ring: 108 10% 40%;
-  }
+body {
+  display: block;
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  color: #0e2420;
+  background: #cfdad6;
 }
 
-.main-bg {
-  width: 100vw;
-  height: 100vh;
-  mask-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7), transparent);
-  mask-position: center;
-  mask-repeat: no-repeat;
+#root {
+  width: 100%;
 }
 
-.header-bg {
-  mask-image: linear-gradient(to right, transparent, black);
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Newsreader", Georgia, serif;
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid #e9a820;
+  outline-offset: 3px;
+}
+
+@keyframes settle {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.settle {
+  animation: settle 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settle { animation: none; }
+}
+
+@media print {
+  html, body { background: #fff; }
+  .sheet { box-shadow: none; margin: 0; max-width: none; }
+  .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sidebar-inner { position: static; }
 }
