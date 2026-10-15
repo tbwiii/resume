@@ -1,61 +1,41 @@
 import "./App.css";
 import Header from "@components/header";
-import { DotPattern } from "@components/magicui/dot-pattern";
-import BlurFade from "@components/magicui/blur-fade";
 import Experience from "@components/experience";
 import Skills from "@components/skills";
 import { IconExternalLink } from "@tabler/icons-react";
 
-const colTitleClasses = "text-2xl mb-4";
-
 function App() {
   return (
-    <>
-      <div className="container m-auto bg-white rounded-xl shadow text-slate-900">
-        <Header />
-        <div className="p-8 text-lg text-white drop-shadow shadow-inner bg-gradient-to-tl from-opal-400 to-opal-600">
-          <BlurFade delay={0.25} duration={0.75}>
-            <p>
-              Senior Full Stack Developer with a <strong>focus</strong> on{" "}
-              <strong>component-based web applications</strong>. Experienced{" "}
-              self-starter with a dedication to learning and sharing. Seeking a{" "}
-              <strong>collaborative</strong> environment that encourages{" "}
-              experimentation and <strong>iteration</strong>.
-            </p>
-          </BlurFade>
+    <div className="sheet grid lg:grid-cols-[320px_1fr] max-w-6xl mx-auto lg:my-8 bg-paper shadow-xl lg:rounded-sm overflow-hidden">
+      <aside className="sidebar bg-ink text-paper">
+        <div className="sidebar-inner lg:sticky lg:top-0 grid gap-10 p-8 lg:p-10">
+          <Header />
+          <Skills />
         </div>
-        <BlurFade delay={0.25} duration={0.75}>
-          <div className="grid lg:grid-cols-8 gap-20 p-8">
-            <div className="lg:col-span-6">
-              <h3 className={colTitleClasses}>Recent Experience</h3>
-              <div className="grid gap-8">
-                <Experience />
-                <div className="flex justify-between">
-                  <h4 className="text-2xl">
-                    <a
-                      className="hover:underline transition-all text-opal-500"
-                      href="https://www.linkedin.com/in/tbwiii"
-                    >
-                      <span className="flex gap-2 items-center">
-                        More on LinkedIn
-                        <IconExternalLink />
-                      </span>
-                    </a>
-                  </h4>
+      </aside>
 
-                  <span>2007 - 2024</span>
-                </div>
-              </div>
-            </div>
-            <div className="lg:col-span-2">
-              <h3 className={colTitleClasses}>Skills & Technologies</h3>
-              <Skills />
-            </div>
-          </div>
-        </BlurFade>
-      </div>
-      <DotPattern className="-z-10 main-bg" />
-    </>
+      <main className="settle p-8 lg:p-14 grid gap-14 content-start">
+        <p className="font-display text-2xl lg:text-[1.7rem] leading-snug max-w-[34ch] lg:max-w-[40ch]">
+          Senior full stack developer focused on component-based web
+          applications. A self-starter who keeps learning and sharing, looking
+          for a collaborative team that values experimentation and iteration.
+        </p>
+
+        <section aria-labelledby="experience">
+          <h2 id="experience" className="font-display text-3xl mb-8">
+            Experience
+          </h2>
+          <Experience />
+          <a
+            className="mt-10 inline-flex gap-2 items-center font-semibold underline decoration-signal decoration-2 underline-offset-4 hover:decoration-4"
+            href="https://www.linkedin.com/in/tbwiii"
+          >
+            Full history on LinkedIn
+            <IconExternalLink size={18} />
+          </a>
+        </section>
+      </main>
+    </div>
   );
 }
 

@@ -2,41 +2,41 @@ import {
   IconBrandAppleFilled,
   IconPigMoney,
   IconFishHook,
-  IconStarFilled,
 } from "@tabler/icons-react";
-import BlurFade from "./magicui/blur-fade";
 
 type xpItem = {
   title: string;
   company: string;
-  theming: string;
   icon: JSX.Element;
   date: string;
   description: string;
   highlights: string[];
+  metric?: { from: string; to: string; caption: string };
 };
 
 const xpItems: xpItem[] = [
   {
     title: "Senior Full Stack Engineer",
     company: "Apple",
-    theming: "text-black",
-    icon: <IconBrandAppleFilled size={20} />,
+    icon: <IconBrandAppleFilled size={18} />,
     date: "2022 - Present",
-    description:
-      `Enhance Conversation Kit Studio for managing multi region and multi lingual application content. Develop new features, write and execute migrations, troubleshoot erroneous data, and strategically plan and decompose feature stories.`,
+    description: `Enhance Conversation Kit Studio for managing multi region and multi lingual application content. Develop new features, write and execute migrations, troubleshoot erroneous data, and strategically plan and decompose feature stories.`,
+    metric: {
+      from: "3+ hours",
+      to: "~5 min",
+      caption:
+        "Audit tool run time, across more than 8 million MongoDB documents",
+    },
     highlights: [
       "Improved the publishing and localization process for hundreds of dialog flows, enabling support for millions of messages each month.",
       "Implemented a sensitive-information roll-out tool for managing user access to unannounced product info",
-      "Optimized an audit tool for analyzing over 8 million MongoDB documents. 3+ hours => ~5 minutes",
-      "Create a messaging system for recording publish data and user activity with Kafka and MongoDB",
+      "Created a messaging system for recording publish data and user activity with Kafka and MongoDB",
     ],
   },
   {
     title: "Co-Founder/Principal Engineer",
     company: "OinkChing",
-    theming: "text-purple-600",
-    icon: <IconPigMoney size={20} />,
+    icon: <IconPigMoney size={18} />,
     date: "2020 - 2022",
     description:
       "Make and implement all design and development decisions. Develop features, fix bugs, and maintain the platform.",
@@ -49,7 +49,6 @@ const xpItems: xpItem[] = [
   {
     title: "Software Engineer",
     company: "PhishMe",
-    theming: "text-red-400",
     icon: <IconFishHook size={18} />,
     date: "2015 - 2018",
     description:
@@ -63,40 +62,55 @@ const xpItems: xpItem[] = [
 
 export default function Experience() {
   return (
-    <div className="grid gap-10">
-      {xpItems.map((item, idx) => (
-        <BlurFade key={idx} duration={0.75} delay={idx * 0.2 + 0.5}>
-          <div className="grid gap-4 border-b-2 pb-10" key={item.title}>
-            <div className="lg:flex gap-2 justify-between">
-              <div className="lg:flex gap-4">
-                <h3 className="text-2xl">{item.title}</h3>
-                <div
-                  className={`inline-block py-2 text-sm rounded ${item.theming}`}
-                >
-                  <span className="flex gap-1 items-center">
-                    {item.icon}
-                    {item.company}
-                  </span>
-                </div>
-              </div>
-              <span>{item.date}</span>
+    <ol className="grid gap-14">
+      {xpItems.map((item) => (
+        <li
+          key={item.title}
+          className="grid gap-x-10 gap-y-3 lg:grid-cols-[8.5rem_1fr]"
+        >
+          <p className="text-sm font-medium text-opal-600 lg:pt-2">
+            {item.date}
+          </p>
+          <div className="grid gap-4">
+            <div>
+              <h3 className="font-display text-2xl lg:text-3xl leading-tight">
+                {item.title}
+              </h3>
+              <p className="flex gap-2 items-center mt-1 text-opal-700 font-medium">
+                {item.icon}
+                {item.company}
+              </p>
             </div>
-            {item.description}
+            <p className="max-w-[62ch] leading-relaxed">{item.description}</p>
 
-            <h4 className="text-xl text-opal-800">Highlights</h4>
-            <ul>
-              {item.highlights.map((highlight, idx) => (
-                <li className="flex gap-4 items-center mb-2" key={idx}>
-                  <span className="shrink-0 text-opal-500">
-                    <IconStarFilled size={14} />
+            {item.metric && (
+              <figure className="my-2 border-l-4 border-signal pl-5">
+                <div className="font-display text-4xl lg:text-5xl leading-none flex flex-wrap items-baseline gap-x-3">
+                  <span className="text-opal-500 line-through decoration-2">
+                    {item.metric.from}
                   </span>
-                  <span>{highlight}</span>
+                  <span>to</span>
+                  <span className="font-semibold">{item.metric.to}</span>
+                </div>
+                <figcaption className="mt-2 text-sm text-opal-700">
+                  {item.metric.caption}
+                </figcaption>
+              </figure>
+            )}
+
+            <ul className="grid gap-2 max-w-[62ch]">
+              {item.highlights.map((highlight) => (
+                <li
+                  key={highlight}
+                  className="pl-5 relative leading-relaxed before:content-[''] before:absolute before:left-0 before:top-[0.7em] before:w-2 before:h-0.5 before:bg-opal-500"
+                >
+                  {highlight}
                 </li>
               ))}
             </ul>
           </div>
-        </BlurFade>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }

@@ -1,127 +1,36 @@
-import { ReactNode } from "react";
-import BlurFade from "./magicui/blur-fade";
-import IconNetlify from "@components/icons/netlify";
-import IconGodot from "@components/icons/godot";
-import IconAffinity from "@components/icons/affinity";
-import {
-  IconBrandAws,
-  IconBrandCss3,
-  IconBrandGithub,
-  IconBrandJavascript,
-  IconBrandNextjs,
-  IconBrandNuxt,
-  IconBrandReact,
-  IconBrandTailwind,
-  IconBrandVercel,
-  IconBrandVue,
-  IconCards,
-  IconCode,
-  IconDiamond,
-  IconTrack,
-  IconBrandWordpress,
-  IconBrandTypescript,
-} from "@tabler/icons-react";
-
-type skillItem = {
-  name: string;
-  icon: ReactNode | null;
-};
-
-const skillItems: skillItem[] = [
+const groups: { title: string; items: string[] }[] = [
   {
-    name: "JavaScript",
-    icon: <IconBrandJavascript color="#F0DB4F" />,
+    title: "Languages",
+    items: ["JavaScript", "TypeScript", "Ruby", "HTML", "CSS / SCSS"],
   },
   {
-    name: "TypeScript",
-    icon: <IconBrandTypescript color="#4476c0" />,
+    title: "Frameworks",
+    items: ["React", "Next", "Vue", "Nuxt", "Ruby on Rails", "Tailwind"],
   },
   {
-    name: "React ",
-    icon: <IconBrandReact color="#61DBFB" />,
+    title: "Platforms",
+    items: ["AWS", "Vercel", "Netlify", "GitHub", "WordPress"],
   },
   {
-    name: "Next",
-    icon: <IconBrandNextjs />,
-  },
-  {
-    name: "Vue",
-    icon: <IconBrandVue color="#41B883" />,
-  },
-  {
-    name: "Nuxt",
-    icon: <IconBrandNuxt color="#41B883" />,
-  },
-  {
-    name: "Ruby",
-    icon: <IconDiamond color="#9a3636" />,
-  },
-  {
-    name: "Ruby on Rails",
-    icon: <IconTrack color="#9a3636" />,
-  },
-  {
-    name: "CSS/SCSS",
-    icon: <IconBrandCss3 color="#0077c8" />,
-  },
-  {
-    name: "HTML",
-    icon: <IconCode />,
-  },
-  {
-    name: "Github",
-    icon: <IconBrandGithub />,
-  },
-  {
-    name: "Tailwind",
-    icon: <IconBrandTailwind color="#62baf3" />,
-  },
-  {
-    name: "AWS",
-    icon: <IconBrandAws />,
-  },
-  {
-    name: "Affinity Suite",
-    icon: <IconAffinity />,
-  },
-  {
-    name: "Vercel",
-    icon: <IconBrandVercel />,
-  },
-  {
-    name: "Netlify",
-    icon: <IconNetlify color="#72e3e1" />,
-  },
-  {
-    name: "WordPress",
-    icon: <IconBrandWordpress color="#000000" />,
-  },
-  {
-    name: "Godot",
-    icon: <IconGodot color="#588abb" />,
-  },
-  {
-    name: "Card Tricks",
-    icon: <IconCards color="#a26666" />,
+    title: "Outside work",
+    items: ["Affinity Suite", "Godot", "Card tricks"],
   },
 ];
 
 export default function Skills() {
   return (
-    <ul className="grid gap-6">
-      {skillItems.map((item: skillItem, idx) => (
-        <BlurFade
-          key={idx}
-          xOffset={-10}
-          duration={0.2}
-          delay={idx * 0.07 + 0.75}
-        >
-          <li className="flex gap-2 -ml-3 items-center">
-            {item.icon}
-            {item.name}
-          </li>
-        </BlurFade>
+    <section aria-labelledby="skills" className="grid gap-6">
+      <h2 id="skills" className="font-display text-2xl">
+        Skills & technologies
+      </h2>
+      {groups.map((group) => (
+        <div key={group.title}>
+          <h3 className="text-sm font-semibold text-opal-200 mb-1">
+            {group.title}
+          </h3>
+          <p className="leading-relaxed">{group.items.join(", ")}</p>
+        </div>
       ))}
-    </ul>
+    </section>
   );
 }

@@ -12,7 +12,14 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+  		fontFamily: {
+        display: ['Newsreader', 'Georgia', 'serif'],
+        sans: ['Hanken Grotesk', 'system-ui', 'sans-serif'],
+      },
   		colors: {
+        ink: '#0e2420',
+        paper: '#f4f6f4',
+        signal: '#e9a820',
         "harlequin": {
           50: "#e2e6e0",
           100: "#c6cdc4",
