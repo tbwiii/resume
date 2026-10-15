@@ -20,6 +20,17 @@ import {
   IconTrack,
   IconBrandWordpress,
   IconBrandTypescript,
+  IconBrandSvelte,
+  IconBrandNodejs,
+  IconBrandGraphql,
+  IconBrandMongodb,
+  IconBrandFigma,
+  IconBrandDocker,
+  IconBrandCypress,
+  IconBrandVite,
+  IconBrandGit,
+  IconDatabase,
+  IconRobot,
 } from "@tabler/icons-react";
 
 type skillItem = {
@@ -53,12 +64,40 @@ const skillItems: skillItem[] = [
     icon: <IconBrandNuxt color="#41B883" />,
   },
   {
+    name: "Svelte",
+    icon: <IconBrandSvelte color="#ff3e00" />,
+  },
+  {
+    name: "Vite",
+    icon: <IconBrandVite color="#a855f7" />,
+  },
+  {
     name: "Ruby",
     icon: <IconDiamond color="#9a3636" />,
   },
   {
     name: "Ruby on Rails",
     icon: <IconTrack color="#9a3636" />,
+  },
+  {
+    name: "Node",
+    icon: <IconBrandNodejs color="#539e43" />,
+  },
+  {
+    name: "GraphQL",
+    icon: <IconBrandGraphql color="#e535ab" />,
+  },
+  {
+    name: "PostgreSQL",
+    icon: <IconDatabase color="#336791" />,
+  },
+  {
+    name: "MongoDB",
+    icon: <IconBrandMongodb color="#47a248" />,
+  },
+  {
+    name: "Redis",
+    icon: <IconDatabase color="#d82c20" />,
   },
   {
     name: "CSS/SCSS",
@@ -79,6 +118,26 @@ const skillItems: skillItem[] = [
   {
     name: "AWS",
     icon: <IconBrandAws />,
+  },
+  {
+    name: "Docker",
+    icon: <IconBrandDocker color="#2496ed" />,
+  },
+  {
+    name: "Cypress",
+    icon: <IconBrandCypress />,
+  },
+  {
+    name: "Git",
+    icon: <IconBrandGit color="#f05032" />,
+  },
+  {
+    name: "Claude Code",
+    icon: <IconRobot color="#d97757" />,
+  },
+  {
+    name: "Figma",
+    icon: <IconBrandFigma color="#f24e1e" />,
   },
   {
     name: "Affinity Suite",

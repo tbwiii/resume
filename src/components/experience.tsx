@@ -3,6 +3,7 @@ import {
   IconPigMoney,
   IconFishHook,
   IconStarFilled,
+  IconMessage,
 } from "@tabler/icons-react";
 import BlurFade from "./magicui/blur-fade";
 
@@ -18,11 +19,27 @@ type xpItem = {
 
 const xpItems: xpItem[] = [
   {
+    title: "Senior Full Stack Developer",
+    company: "TextUs",
+    theming: "text-blue-600",
+    icon: <IconMessage size={20} />,
+    date: "2024 - Present",
+    description:
+      "Build features across a Rails and React monorepo for the TextUs business messaging platform, working alongside Claude as an AI pair.",
+    highlights: [
+      "Created the AI Rewrite feature, which increased response rates by 10-12%.",
+      "Built the self-serve purchase flow for new customers, including an embedded Paystand payment step and terms consent captured at checkout.",
+      "Created the Message Quality Indicator (MQI), which flags risky content as users compose messages and blocks sending while any message fails the check. Tuned thresholds and admin hints.",
+      "Contributed to multi-factor authentication and the broader Security 2.0 effort.",
+      "Established a repeatable workflow for shipping tickets with AI agents: one background session per ticket, automated review before any PR, and a human test pass before anything is pushed.",
+    ],
+  },
+  {
     title: "Senior Full Stack Engineer",
     company: "Apple",
     theming: "text-black",
     icon: <IconBrandAppleFilled size={20} />,
-    date: "2022 - Present",
+    date: "2022 - 2024",
     description:
       `Enhance Conversation Kit Studio for managing multi region and multi lingual application content. Develop new features, write and execute migrations, troubleshoot erroneous data, and strategically plan and decompose feature stories.`,
     highlights: [
@@ -83,7 +100,9 @@ export default function Experience() {
             </div>
             {item.description}
 
-            <h4 className="text-xl text-opal-800">Highlights</h4>
+            {item.highlights.length > 0 && (
+              <h4 className="text-xl text-opal-800">Highlights</h4>
+            )}
             <ul>
               {item.highlights.map((highlight, idx) => (
                 <li className="flex gap-4 items-center mb-2" key={idx}>
